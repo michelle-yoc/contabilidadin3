@@ -1,0 +1,102 @@
+body{
+    background-color:#a9b7dd;
+}
+.container{
+    padding-top: 50px;
+    margin-left: 180px;
+    justify-content: center;
+    }
+
+    .excel{
+    width: 1000px;
+    height: 600px;
+    box-shadow: 5px 5px 5px;
+    }
+
+
+    .container1{
+    width: 75px;
+    height: 75px;
+   float:left;
+   padding-left:5px;
+}
+
+header{
+    background:#888b97;
+    width: 84%;
+    height: 80px;
+    position:static;
+    margin-top: 0px;
+     margin-left:100px;
+    margin-right:100px;
+    box-shadow: 5PX 5PX 5PX;
+    font-style: italic; 
+}
+
+nav{
+    float:left;
+    padding-left: 100px ;
+
+    
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    line-height: 30px;
+
+}
+
+nav ul li {
+    float: left;
+    font-size: 25px;
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+nav ul li a {
+    display:inline block;
+    padding: 10px;
+    color:#fff;
+    text-decoration:none;
+       
+}
+
+nav ul li:hover {
+    background:#fce9db;
+
+}
+
+
+/*.conteiner{
+    
+}*/
+
+
+.conteiner5{
+    margin-top: 40px;
+    background: black;
+    width: 1000px;
+    height: 1500px;
+    padding-left:80px;
+    padding-top: 60px;
+    box-shadow: 5px 5px 5px;
+    background:#c2c8d3;
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 55px;
+    padding-bottom: 60px;
+    
+    
+
+
+}
+.conteiner11{
+    padding-left: 90px;
+    padding-top: 80px;
+}
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <title> HOJA DE TRABAJO </title>
+    <link rel="stylesheet" href="diseño2.css">
+    </head>
+    
+    
+    
+    <body>
+k
+    
+    <header>
+        <img class="container1" src="umg.jpg">
+    
+        <nav>
+        
+            <ul>
+                <li> <a href="index.html"> Manual </a></li>
+                <li> <a href="hoja de trabajo.html"> Hoja de trabajo </a> </li>
+                <li> <a href="Estado de resultado.html"> Estado de Resultados</a></li>
+                <li> <a href="Estado de situación financiera.html">Estado de situación financiera</a></li>
+            </ul>    
+        </nav>
+    </header><br>
+<br>
+
+<div class="conteiner11">
+    <script>
+        //<![CDATA[
+        function makeArray() {
+        for (i = 0; i<makeArray.arguments.length; i++)
+        this[i + 1] = makeArray.arguments[i];}
+        var months = new makeArray('Enero','Febrero','Marzo','Abril','Mayo',
+        'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var yy = date.getYear();
+        var year = (yy < 1000) ? yy + 1900 : yy;
+        document.write("Hoy es " + day + " de " + months[month] + " del " + year);
+        //]]>
+        </script>    
+      
+
+
+      <script>
+        function startTime(){
+        today=new Date();
+        h=today.getHours();
+        m=today.getMinutes();
+        s=today.getSeconds();
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+        t=setTimeout('startTime()',500);}
+        function checkTime(i)
+        {if (i<10) {i="0" + i;}return i;}
+        window.onload=function(){startTime();}
+        </script>
+        <div id="reloj" style="font-size:20px;"></div> 
+    </div>  
+
+
+
+
+    <div class="container">
+    <iframe class="excel"id="archivo"   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRYT5BIHUX2hN9tmTqNpQScLgCwe9M66Yp6UbX0X2X8gSU10fMAvt5gJNxJG3uRtg/pubhtml?gid=1843806732&amp;single=true&amp;widget=true&amp;headers=false"></iframe></iframe><br>
+    
+    </div>
+     
+   
+   <div class="boton"><br>
+     
+    <br><input id="boton1" type="button" value="Cambiar Hoja" onclick="cambio()">
+      <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       *copiar vínculo sin comillas ("")</h4> 
+    </div>
+
+   
+   <form action="../../form-result.php" method="post" enctype="multipart/form-data" target="_blank">
+
+   
+  
+    <script src="archivo2.js"></script>
+    <script src="jquery.js"></script>
+    
+   
+  
+  </form>
+</body>
+</html> 

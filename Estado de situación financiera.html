@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title> Estado de Situación financiera  </title>
+        <link rel="stylesheet" href="diseño4.css">
+    </head>
+    <body>
+    <header>
+        <img class="container1" src="umg.jpg">
+        <nav>
+            <ul>
+                <li> <a href="index.html"> Manual </a></li>
+                <li> <a href="hoja de trabajo.html"> Hoja de trabajo </a> </li>
+                <li> <a href="Estado de resultado.html"> Estado de Resultado </a></li>
+                <li> <a href="Estado de situación financiera.html"> Estado de situación financiera </a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="conteiner11">
+        <script>
+            //<![CDATA[
+            function makeArray() {
+            for (i = 0; i<makeArray.arguments.length; i++)
+            this[i + 1] = makeArray.arguments[i];}
+            var months = new makeArray('Enero','Febrero','Marzo','Abril','Mayo',
+            'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var yy = date.getYear();
+            var year = (yy < 1000) ? yy + 1900 : yy;
+            document.write("Hoy es " + day + " de " + months[month] + " del " + year);
+            //]]>
+            </script> 
+
+          <script>
+            function startTime(){
+            today=new Date();
+            h=today.getHours();
+            m=today.getMinutes();
+            s=today.getSeconds();
+            m=checkTime(m);
+            s=checkTime(s);
+            document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+            t=setTimeout('startTime()',500);}
+            function checkTime(i)
+            {if (i<10) {i="0" + i;}return i;}
+            window.onload=function(){startTime();}
+            </script>
+            <div id="reloj" style="font-size:20px;"></div> 
+    </div>  
+            
+
+     <div class="container">
+        <h1>Estado de situacion financiera Conjunto<br>(Cifras Expresadas en Quetzales)</h1><br>
+
+        <div class="conteiner5">
+<br>
+
+    <form>
+      
+           
+        
+        <br>Caja y Bancos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="cajaybancos" name="num3" step="0.01" /p onchange="formateo(this)"><br>
+
+        <br>Inventario Final:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="text" id="inventariofinal" name="num4" step="0.01"/p onchange="formateo(this)"><br>
+
+        <br>Cuentas por cobrar: &nbsp;&nbsp;
+        <input type="text" id="cuentasporcobrar" name="num1" step="0.01"/p onchange="formateo(this)"> <br>
+
+         <br>Provisión <BR>cuentas incobrables:&nbsp;&nbsp;
+         <input type="text" id="provisioncuentasincobrables" name="num2" step="0.01"/p  onchange="formateo(this)" >   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="calcular" step="0.01"/p onclick="residuo()">
+        <input type="text" id="resultado1" step="0.01"/p><br>
+
+        <br>Suministro <br>Inventario  Final:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="text" id="suministroinventariofinal" name="num1" step="0.01"/p  onchange="formateo(this)" >
+         </form>
+
+    <div class="fila"><br>
+        <label for=""><h3>Activo Corriente </h3></label>
+        <input type="button" value="calcular" step="0.01"/p onclick="sumadelactivocorriente()">
+        <input type="text" id="resultado" step="0.01" readonly>
+        </div>
+
+        <br>Mobiliario:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="mobiliario" name="num1" step="0.01"/p  onchange="formateo(this)"> <br>
+
+        <br>Depreciaciones <br>no cobradas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="depreciacionesnocobradas" name="num2" step="0.01"/p  onchange="formateo(this)"> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="calcular" step="0.01"/p onclick="activono_corriente()">
+        <input type="text" id="resultado3" step="0.01" readonly><br>
+
+        <br>Gastos <br>de organización:&nbsp;&nbsp;&nbsp;
+        <input type="text" id="gastosdeorganizacion" name="num3" step="0.01"/p  onchange="formateo(this)"> <br>
+        
+
+        <br>Suma del Activo:&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="calcular" step="0.01"/p onclick="sumadelactivo()">
+        <input type="text" id="resultado4" step="0.01"/p><br>
+      
+
+        <div class="fila"><br>
+            <label for=""> <h3> Activo  no Corriente </h3></label>
+            <input type="button" value="calcular" step="0.01"/p onclick="sumadg()">
+        <input type="text" id="resultado5" step="0.01"/p>
+       </div>  
+
+
+        <form><br>
+        <br><h3>Patrimonio</h3> <h6> *clic en calcular, luego de ingresar las cantidades, para cuadre del ejercicio.</h6>
+        <input type="button" value="calcular"  step="0.01"/p onclick="patrimonio()">
+        <input type="text" id="resultado7" step="0.01"/p> <br>
+
+        <br>Capital Social: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <input type="text" id="capitalsocial" name="num1" step="0.01"/p onchange="formateo(this)"> <br>
+
+        <br>  Utilidades Retenidas:&nbsp;&nbsp;&nbsp
+        <input type="text" id="utilidadesretenidas" name="num2" step="0.01"/p onchange="formateo(this)"> <br>
+
+        <br>Suma del patrimonio <input type="button" value="calcular" step="0.01"/p onclick="sumacyu()">
+        <input type="text" id="resultado6" step="0.01"/p><br></form>
+
+       
+<form>
+        <br> Cuentas <br>por pagar:
+        <input type="text" id="cuentasporpagar" onchange="cuentas(this)"   name="num2" step="0.01"/p><br>   
+   
+        <br>  Suma del <br>pasivo y patrimonio 
+         <input type="button" value="calcular" step="0.01"/p onclick="sumadelpasivoypatrimonio()">
+        <input type="text" id="resultado9" step="0.01"/p>
+     </form>
+   
+     <br><h3> Pasivo corriente </h3>
+     <input type="text" id="resultado8" step="0.01"/p> <br>
+     <h6> *clic en calcular, luego de ingresar las cantidades, para cuadre del ejercicio.</h6>
+        </div>
+       
+        <br><input type="button" value="Imprimir" class="printbutton">
+        
+
+    
+
+
+</body>
+
+<script src="jquery.js"></script>
+<script src="accounting.js"></script>
+<script src="archivo1.js">  </script>
+
+</html>

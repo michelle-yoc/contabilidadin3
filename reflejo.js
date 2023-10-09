@@ -1,0 +1,1 @@
+const cantidad1 = document.getElementById("cantidad1");

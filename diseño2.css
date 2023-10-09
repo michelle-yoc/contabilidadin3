@@ -1,0 +1,91 @@
+body{
+    background-color:#a9b7dd;
+}
+
+
+.container1{
+    width: 75px;
+    height: 75px;
+   float:left;
+   padding-left: 5px;
+}
+
+.container{
+ padding-top: 60px;
+text-align: center;
+ 
+}
+
+.excel{
+    width: 1250px;
+    height: 700px;
+    box-shadow: 5px 5px 5px;  
+    margin-bottom: 10px; 
+    text-align: center;
+    
+}
+
+header{
+
+    background:#888b97;
+    width: 84%;
+    height: 80px;
+    position: static;
+    margin-top: 10px;
+     margin-left:100px;
+    margin-right:100px;
+    box-shadow: 5PX 5PX 5PX;
+    font-style: italic;   
+}
+
+nav{
+    float:left;
+    padding-left:100px; 
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    line-height: 30px;
+
+}
+
+nav ul li {
+    float: left;
+    font-size: 25px;
+    font-family: arial, sans-serif;
+    text-align: center;       
+}
+
+nav ul li a {
+    display:inline block;
+    padding: 10px;
+    color:#f7f1f1f8;
+    text-decoration:none;
+}
+
+nav ul li:hover {
+    background:#d1c2c2;
+}
+
+#boton1{
+    margin-top: 50px;
+    width:160px;
+    height: 40px;
+    background-color:#b9b8b8;
+    margin-left: 145px;
+    font-size:medium;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+   
+  
+}
+ 
+.conteiner11{
+    padding-left: 90px;
+    padding-top: 50px;
+    
+}
+
+
+

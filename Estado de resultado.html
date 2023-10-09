@@ -1,0 +1,169 @@
+<html>
+    <head> 
+        <title> Estado de Resultado </title>
+        <link rel="stylesheet" href="diseño3.css">
+
+    </head>
+    <body>
+    <header>
+        <img class="container1" src="umg.jpg">
+        <nav>
+            <ul>
+              <li> <a href="index.html"> Manual </a></li> 
+             <li> <a href="hoja de trabajo.html"> Hoja de Trabajo </a></li>
+             <li> <a href="Estado de resultado.html"> Estado de Resultado</a></li>
+             <li> <a href="Estado de situación financiera.html"> Estado de situación financiera </a></li>  
+            </ul>
+        </nav>
+    </header>
+    
+     
+ 
+  <div class="conteiner11">
+
+
+  <script>
+    //<![CDATA[
+    function makeArray() {
+    for (i = 0; i<makeArray.arguments.length; i++)
+    this[i + 1] = makeArray.arguments[i];}
+    var months = new makeArray('Enero','Febrero','Marzo','Abril','Mayo',
+    'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var yy = date.getYear();
+    var year = (yy < 1000) ? yy + 1900 : yy;
+    document.write("Hoy es " + day + " de " + months[month] + " del " + year);
+    //]]>
+    </script>    
+  <script>
+    function startTime(){
+    today=new Date();
+    h=today.getHours();
+    m=today.getMinutes();
+    s=today.getSeconds();
+    m=checkTime(m);
+    s=checkTime(s);
+    document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+    t=setTimeout('startTime()',500);}
+    function checkTime(i)
+    {if (i<10) {i="0" + i;}return i;}
+    window.onload=function(){startTime();}
+    </script>
+    <div id="reloj" style="font-size:20px;"></div>  
+   </div>
+
+
+
+<div class="conteiner4">
+
+
+  <h2><br> ESTADO DE RESULTADOS EN CONJUNTO 
+  <br>(CIFRAS EXPRESADAS EN QUETZALES)<br></h2>
+ </tbody>
+</div>
+
+
+
+<br>
+<br>
+<div class="conteiner5">
+<br>
+
+<div class="fila">
+  <br>
+  <br>
+  
+<br>
+  <label for="">Ventas</label>
+    <input type="text" id="cantidad1" name="num1" step="0.01"/p onchange="prueba1(this)">
+    <input type="text" id="resultado" step="0.01" readonly>
+    </div>
+   
+<h2>Costo de Ventas</h2>
+
+
+<form>
+  Inventario Inicial
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" id="inventario_inicial" name="num1" step="0.01"/p onchange="formateo(this)"> 
+  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Compras: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" id="compras" name="num2" step="0.01"/p onchange="formateo(this)"> 
+      <input type="button" value="calcular" step="0.01"/p onclick="mercaderia_disponible()">
+      <input type="text" id="resultado1" step="0.01"/p>
+    </form>
+
+    <div id="resultado"></div>
+    <form><br>
+
+     Mercaderia disponible: &nbsp;&nbsp;
+     <input type="text" id="mercaderiadisponible" name="num1" step="0.01"/p onchange="prueba1(this)">
+
+     &nbsp;&nbsp;&nbsp;Inventario final:&nbsp;&nbsp;&nbsp;
+      <input type="text" id="inventariofinal" name="num2" step="0.01"/p onchange="prueba1(this)">
+       <input type="button" value="calcular" step="0.01"/p onclick="gananciabruta()">
+      <input type="text" id="resultado2" step="0.01">
+    </form>
+
+    <div id="resultado2"></div>
+<form>
+<br>
+     <input type="button" value="calcular" step="0.01"/p onclick="ventas()">
+      Ganancia bruta&nbsp;&nbsp; 
+      <input type="text" id="ganancia_bruta" name="num1" step="0.01"/p onchange="prueba1(this)">
+    </form>
+
+    <h2>Gastos de operación</h2>
+    <form>
+    Depreciaciones: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="depreciaciones" name="num1" step="0.01"/p onchange="prueba1(this)">
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cuentas Incobrables:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="text" id="cuentasincobrables" name="num2" step="0.01"/p onchange="prueba1(this)"><br>
+
+ <br>Gastos de ventas:&nbsp;&nbsp;&nbsp; <input type="text" id="gastosdeventas" name="num1" step="0.01"/p onchange="prueba1(this)">
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Otros Gastos:
+  <input type="text" id="otrosgastos" name="num2" step="0.01"/p onchange="prueba3(this)"><br>
+       <br><input type="button" value="Calcular" step="0.01"/p onclick="gastosdeoperacion()">
+       <input type="text" id="resultado3">
+  </form>
+
+    
+    <h2>Ganancia del período</h2>
+    <form>
+      Ganancia bruta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="bruta" name="num1" step="0.01"/p onchange="prueba1(this)" >
+     </form>
+     <form>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gastos de operacion :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="gastos" name="num1" step="0.01"/p readonly><br>
+      </form>
+
+     <form>
+      <br>Gastos de Administración:&nbsp;&nbsp;&nbsp;&nbsp; 
+      <input type="text" id="gastosdeadministracion" name="num1" step="0.01"/p onchange="prueba1(this)"><br>
+      <br><input type="button" value="Calcular" onclick="gananciadelperiodo()">
+      <input type="text" id="resultado5">
+     <br>
+    </form>
+    </div>
+    <div class="conteiner9">
+    <br><input type="button" value="Imprimir" class="printbutton">
+
+  
+   
+  
+    
+
+<script src="archivo.js"></script>
+<script src="accounting.js"></script> 
+<script src="jquery.js"></script>
+</div>
+
+ </body>
+</html>
